@@ -160,7 +160,7 @@ class MuseumController extends Controller
 
         return response()->json([
             'status'=> 200,
-            'message'=>'Berhasil Update Museum' + $museum ,
+            'message'=>'Berhasil Update Museum',
         ]);
     }
 
@@ -186,6 +186,7 @@ class MuseumController extends Controller
             $about = new about();
             $about-> id_museum = $id_museum->id;
             $about-> about = '<p>ini adalah Museum....</p>' ;
+            $about-> about_en = "<p>This is a Museum</p>";
             $about->save();
 
             return response()->json([

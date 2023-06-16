@@ -27,10 +27,6 @@ class SliderController extends Controller
     public function upload(Request $request) {
         $imagesName = [];
         $response = [];
-
-        // return response()->json([
-        //     'status'=> $request->all(),
-        // ]);
  
         $validator = Validator::make($request->all(),
             [
